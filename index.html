@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>타자 치는 효과</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		let i = 0;
+		const x = "박희창 바보       힣";
+		let y= "";//typeof 문자열
+		console.log( x.length );//17
+		function z(){
+			//( 0 < 17 )는 true라면 실행문이 실행된다.
+			if (i < x.length ){
+				$("p").text(  y += x[i] );
+				i++;
+				
+				//0.1초가 흐르면 z()라는 함수를 호출한다.
+				setTimeout(z,200);
+				//실행문
+			}
+		}
+		z();
+		
+	});
+	</script>
+</head>
+<body>
+	<p style="text-align:center">이곳에 타자치는 효과 생긴다.</p>
+</body>
+</html>
